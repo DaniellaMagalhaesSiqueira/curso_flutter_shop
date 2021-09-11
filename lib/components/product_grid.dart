@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:shop/components/product_item.dart';
+import 'package:shop/components/product_grid_item.dart';
 import 'package:shop/models/product.dart';
 import 'package:shop/models/product_list.dart';
 
@@ -18,7 +18,7 @@ class ProductGrid extends StatelessWidget {
       itemCount: loadedProduct.length,
       itemBuilder: (ctx, i) => ChangeNotifierProvider.value(
         value: loadedProduct[i],
-        child: ProductItem(),
+        child: ProductGridItem(),
       ),
       //sliver é uma área de algo que pode ser rolado
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
